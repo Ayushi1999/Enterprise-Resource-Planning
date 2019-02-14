@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erp.ViewEmpsController">
+   <children>
+      <ImageView blendMode="MULTIPLY" fitHeight="403.0" fitWidth="425.0" layoutX="101.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Bluetooth/10313045_1490040101214502_6814738901419095332_n.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tvEmps" layoutX="71.0" layoutY="91.0" prefHeight="218.0" prefWidth="484.0">
+        <columns>
+          <TableColumn fx:id="tcId" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="tcName" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="tcEmail" prefWidth="75.0" text="email" />
+            <TableColumn fx:id="tcAddress" prefWidth="75.0" text="address" />
+            <TableColumn fx:id="tcD_id" prefWidth="75.0" text="D_id" />
+            <TableColumn fx:id="tcContact" prefWidth="75.0" text="contact" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

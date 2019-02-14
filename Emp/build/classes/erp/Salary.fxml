@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erp.SalaryController">
+   <children>
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="75.0" layoutY="226.0" prefHeight="25.0" prefWidth="81.0" promptText="Enter your Id" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="80.0" layoutY="83.0" prefHeight="25.0" prefWidth="46.0" promptText="Name" />
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="75.0" layoutY="150.0" prefHeight="25.0" prefWidth="56.0" promptText="Contact" />
+      <JFXTextField fx:id="txtIncome" labelFloat="true" layoutX="257.0" layoutY="163.0" prefHeight="25.0" prefWidth="70.0" promptText="Income" />
+      <JFXButton fx:id="txtAdd" layoutX="264.0" layoutY="239.0" onAction="#btnAdd" prefHeight="25.0" prefWidth="55.0" text="Add" />
+      <JFXButton fx:id="txtUpdate" layoutX="371.0" layoutY="239.0" onAction="#btnUpdate" text="Update" />
+      <JFXComboBox fx:id="cbYear" labelFloat="true" layoutX="414.0" layoutY="96.0" promptText="Year" />
+      <JFXTextField fx:id="txtEmpId" labelFloat="true" layoutX="76.0" layoutY="284.0" onAction="#btnEmpId" prefHeight="25.0" prefWidth="100.0" promptText="EmpId" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <JFXComboBox fx:id="cbMonth" labelFloat="true" layoutX="253.0" layoutY="96.0" promptText="Month" />
+   </children>
+</AnchorPane>

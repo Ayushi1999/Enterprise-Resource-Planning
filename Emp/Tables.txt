@@ -1,0 +1,104 @@
+CREATE TABLE  "EMPLOYEE" 
+   (	"ID" NUMBER, 
+	"NAME" VARCHAR2(4000), 
+	"ADDRESS" VARCHAR2(4000), 
+	"EMAIL" VARCHAR2(4000), 
+	"D_ID" NUMBER, 
+	"CONTACT" NUMBER, 
+	 CONSTRAINT "EMPLOYEE_PK" PRIMARY KEY ("ID") ENABLE
+   ) ;
+
+CREATE OR REPLACE TRIGGER  "BI_EMPLOYEE" 
+  before insert on "EMPLOYEE"               
+  for each row  
+begin   
+  if :NEW."ID" is null then 
+    select "EMP_SEQ".nextval into :NEW."ID" from dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_EMPLOYEE" ENABLE;
+
+
+
+
+
+CREATE TABLE  "DEPARTMENT" 
+   (	"ID" NUMBER, 
+	"NAME" VARCHAR2(4000), 
+	"LOCATION" VARCHAR2(4000), 
+	"MANAGER" VARCHAR2(4000), 
+	"CONTACT" NUMBER, 
+	 CONSTRAINT "DEPARTMENT_PK" PRIMARY KEY ("ID") ENABLE
+   ) ;
+
+CREATE OR REPLACE TRIGGER  "BI_DEPARTMENT" 
+  before insert on "DEPARTMENT"               
+  for each row  
+begin   
+  if :NEW."ID" is null then 
+    select "DEPARTMENT_SEQ".nextval into :NEW."ID" from dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_DEPARTMENT" ENABLE;
+
+
+
+
+
+
+CREATE TABLE  "SAL" 
+   (	"NAME" VARCHAR2(4000), 
+	"CONTACT" NUMBER, 
+	"INCOME" NUMBER, 
+	"ID" NUMBER, 
+	"EMPID" NUMBER, 
+	"YEAR" NUMBER, 
+	"MONTH" NUMBER, 
+	 CONSTRAINT "SAL_PK" PRIMARY KEY ("ID") ENABLE
+   ) ;
+
+CREATE OR REPLACE TRIGGER  "BI_SAL" 
+  before insert on "SAL"               
+  for each row  
+begin   
+  if :NEW."ID" is null then 
+    select "SALARY_SEQ".nextval into :NEW."ID" from dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_SAL" ENABLE;
+
+
+
+
+
+
+CREATE TABLE  "LEAVE1" 
+   (	"NAME" VARCHAR2(4000), 
+	"ID" NUMBER, 
+	"CONTACT" NUMBER, 
+	"TOTAL_NO_OF_LEAVES" NUMBER, 
+	"LEAVES_TAKEN" NUMBER, 
+	"FROM_DATE" VARCHAR2(4000), 
+	"TO_DATE" VARCHAR2(4000), 
+	"EMPID" NUMBER, 
+	"TYPE_OF_LEAVE" VARCHAR2(4000), 
+	 CONSTRAINT "LEAVE1_PK" PRIMARY KEY ("ID") ENABLE
+   ) ;
+
+CREATE OR REPLACE TRIGGER  "BI_LEAVE1" 
+  before insert on "LEAVE1"               
+  for each row  
+begin   
+  if :NEW."ID" is null then 
+    select "LEAVE_SEQ".nextval into :NEW."ID" from dual; 
+  end if; 
+end; 
+
+/
+ALTER TRIGGER  "BI_LEAVE1" ENABLE;

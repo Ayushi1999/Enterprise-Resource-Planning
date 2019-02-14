@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erp.DepartmentController">
+   <children>
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="95.0" layoutY="83.0" promptText="Id" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="374.0" layoutY="90.0" promptText="Name" />
+      <JFXTextField fx:id="txtLoc" labelFloat="true" layoutX="88.0" layoutY="207.0" promptText="Location" />
+      <JFXTextField fx:id="txtManag" labelFloat="true" layoutX="374.0" layoutY="220.0" promptText="Manager" />
+      <JFXTextField fx:id="txtCont" labelFloat="true" layoutX="82.0" layoutY="328.0" promptText="Contact" />
+      <JFXButton fx:id="btnAdddept" layoutX="317.0" layoutY="341.0" onAction="#add_deptt" text="Add dept" />
+      <JFXButton fx:id="btnUpdate" layoutX="457.0" layoutY="341.0" onAction="#update_deptt" text="Update dept" />
+   </children>
+</AnchorPane>
